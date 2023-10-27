@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+body {
+            background-color: #7209B7; 
+            
+        }
+        .center-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .btn{
+            background-color: #70E000;
+            color: white;
+        }
+  
+        h3,p {
+            color: white;
+        }
+        
+#font{
+    font-family: 'Lilita One', sans-serif;
+}

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <style>
+       
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
+
+       
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FEFAE0;
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 30px;
+    font-family: 'Oswald', sans-serif;
+}
+
+#font{
+    
+    font-family: 'Oswald', sans-serif;
+    
+}
+
+small{
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.question {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.form-check-label {
+    font-weight: 500;
+}
+
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+
+#results {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tela-inicial{
+    
+  
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 100vh;
+}
+
+.btn{
+    justify-content: center;
+       align-items: center;
+}
+
+
+    .tela-oculta {
+        background-color: #f8f8f8;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 20px;
+    }
+
+
+    .list-unstyled {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button.btn-primary {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+    }
+
+    button.btn-primary:hover {
+        background-color: #0056b3;
+    }
+  .tela-oculta {
+        background-color: #f8f8f8;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 20px;
+    }
+
+    .tela-oculta h2 {
+        font-size: 24px;
+        margin-top: 10px;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    .tela-oculta p {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .tela-oculta button {
+        margin-top: 20px;
+    }
+    
+    
+    
+   
+   
+    </style>
+    
+    <title>TESTE TIBETANO | BOOTSTRAP</title>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">  
+        <div class="container">
+            <a class="navbar-brand" href="#">Menu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../index.html">Início</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav><br>
+    
+    
+    
+    <div class="tela tela-inicial">
+        <div class="center-content">
+            <div class="p-3">
+                <div class="text-center">
+                    <h3 class="display-4" id="font">Teste Tibetano</h3>
+                    <small class="fs-6 fw-lighter">Faça este teste e descubra a sua verdadeira personalidade</small><br><br>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Começar Teste Tibetano </button>
+                </div>
+         </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalTitle">Está preparado para o teste?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    O Teste Tibetano: Revelando a Sabedoria Ancestral<br>
+                    Explore a antiga tradição do Tibet através deste teste, desvendando segredos espirituais e reflexões sobre sua própria essência. Descubra o que o Teste Tibetano revela sobre você.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button id="botao-comecar" class="btn btn-primary" data-bs-dismiss="modal">Começar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tela tela-oculta d-none">
+        <div class="container">
+            <h1 class="mt-5">TESTE TIBETANO</h1>
+
+            <div class="question mt-4">
+                <p>1)- Escolha 1 animal que você mais se identifica</p><br>
+               
+                <form id="animalForm">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="animal" value="Águia" id="radio1">
+                        <label class="form-check-label" for="radio1">Águia</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="animal" value="Tigre" id="radio2">
+                        <label class="form-check-label" for="radio2">Tigre</label>
+                    </div>
+                    <div class "form-check">
+                        <input class="form-check-input" type="radio" name="animal" value="Cavalo" id="radio3">
+                        <label class="form-check-label" for="radio3">Cavalo</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="animal" value="Tubarão" id="radio4">
+                        <label class="form-check-label" for="radio4">Tubarão</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="animal" value="Carneiro" id="radio5">
+                        <label class="form-check-label" for="radio5">Carneiro</label>
+                    </div>
+                </form>
+            </div>
+
+            <div class="question mt-4">
+                <p>2)- Agora dê um "adjetivo" a cada frase da lista abaixo</p><br>
+                <ul class="list-unstyled">
+                    <li>O cão é: <input placeholder="Digite aqui" type="text" id="dogAdjective"></li><br><br>
+                    <li>O gato é: <input placeholder="Digite aqui" type="text" id="catAdjective"></li><br><br>
+                    <li>O rato é: <input placeholder="Digite aqui" type="text" id="ratAdjective"></li><br><br>
+                    <li>O café é: <input placeholder="Digite aqui" type="text" id="coffeeAdjective"></li><br><br>
+                    <li>O mar é: <input placeholder="Digite aqui" type="text" id="seaAdjective"></li>
+                </ul>
+            </div>
+
+            <div class="question mt-4">
+                <p>3)- Pense em 5 pessoas importantes na sua vida, e coloque cada uma delas em frente a cor que você desejar</p><br>
+                <ul class="list-unstyled">
+                    <li>Amarelo: <input placeholder="Digite aqui" type="text" id="yellowPerson"></li><br><br>
+                    <li>Laranja: <input placeholder="Digite aqui" type="text" id="orangePerson"></li><br><br>
+                    <li>Vermelho: <input placeholder="Digite aqui" type="text" id="redPerson"></li><br><br>
+                    <li>Branco: <input placeholder="Digite aqui" type="text" id="whitePerson"></li><br><br>
+                    <li>Verde: <input placeholder="Digite aqui" type="text" id="greenPerson"></li><br><br>
+                </ul>
+            </div>
+<center>
+            <button class="btn btn-primary mt-4" onclick="calculateResults()">Ver minha personalidade</button>
+           </center>
+        </div>
+    </div>
+
+    <!-- Div para exibir as respostas em uma tela separada -->
+    <div id="respostas" class="tela tela-oculta d-none">
+        <div class="container">
+            <center>
+            <h2>Resultado da sua Personalidade</h2>
+            </center>
+            <div class="question mt-4">
+                <p class="fs-3">1) Sua Prioridade na vida</p>
+            <p id="animalResult"></p>
+            <center>
+           <div id="liveAlertPlaceholder"></div>
+<button type="button" class="btn btn-primary" id="liveAlertBtn">Ver mais resultados</button>
+</center>
+            </div><br>
+            
+            <div class="question mt-4">
+                <p class="fs-3">2) Suas atitudes perante a vida </p>
+                
+            <p id="dogResult"></p><br>
+            
+            <p id="catResult"></p><br>
+            
+            <p id="ratResult"></p><br>
+            
+            <p id="coffeeResult"></p><br>
+            
+            <p id="seaResult"></p><br>
+            </div>
+            
+            <div class="question mt-4">
+                <p class="fs-3">3) Sua atitude para as pessoas</p>
+            <p id="yellowResult"></p><br>
+            
+            <p id="orangeResult"></p><br>
+            
+            <p id="redResult"></p><br>
+            
+            <p id="whiteResult"></p><br>
+            
+            <p id="greenResult"></p><br>
+            </div>
+            
+            <center>
+           
+                <a href="" class="btn btn-danger mt-4"> Reiniciar Teste</a><br><br>
+                
+            
+            
+            </center>
+        </div>
+    </div><br><br><br><br><br><br><br><br>
+<footer class="container-fluid bg-dark text-white py-3">
+  <div class="row">
+    <div class="col-md-4">
+      <h3>Sobre Nós</h3>
+      <p>Somos alunos da Etec Fernando Prestes extensão Fatec - Sorocaba-SP</p>
+    </div>
+  <div class="row">
+    <div class="col-12 text-center">
+      <p>© 2023 Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script>
+        
+        const botaoComecar = document.getElementById("botao-comecar");
+        const telaInicial = document.querySelector(".tela-inicial");
+        const telaOculta = document.querySelector(".tela-oculta");
+        const radioButtons = Array.from(document.querySelectorAll('input[type=radio]'));
+        
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+const appendAlert = (message, type) => {
+  const wrapper = document.createElement('div')
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `   <div>${message}</div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    '</div>'
+  ].join('')
+
+  alertPlaceholder.append(wrapper)
+}
+
+const alertTrigger = document.getElementById('liveAlertBtn')
+if (alertTrigger) {
+  alertTrigger.addEventListener('click', () => {
+    appendAlert('Águia - Sua carreira<br>Tigre - Sua autoestima<br>Cavalo - Família<br>Tubarão - Dinheiro<br>Carneiro - Amor', 'success')
+  })
+}
+        
+           
+        
+        const dogAdjective = document.getElementById('dogAdjective');
+
+        const animalResponses = {
+            "Águia": "Sua carreira",
+            "Tigre": "Sua autoestima",
+            "Cavalo": "Família",
+            "Tubarão": "Dinheiro",
+            "Carneiro": "Amor"
+        };
+
+        let selectedAnimal = '';
+
+        radioButtons.forEach(radioButton => {
+            radioButton.addEventListener('click', () => {
+                selectedAnimal = radioButton.value;
+            });
+        });
+
+        function calculateResults() {
+            const selectedAnimalResponse = animalResponses[selectedAnimal];
+            const dogAdjectiveValue = dogAdjective.value;
+            const catAdjectiveValue = catAdjective.value;
+            const ratAdjectiveValue = ratAdjective.value;
+            const coffeeAdjectiveValue = coffeeAdjective.value;
+            const seaAdjectiveValue = seaAdjective.value;
+
+            const yellowPerson = document.getElementById('yellowPerson').value;
+            const orangePerson = document.getElementById('orangePerson').value;
+            const redPerson = document.getElementById('redPerson').value;
+            const whitePerson = document.getElementById('whitePerson').value;
+            const greenPerson = document.getElementById('greenPerson').value;
+
+            // Exibir as respostas na tela separada
+            document.getElementById("respostas").classList.remove("d-none");
+            telaOculta.classList.add("d-none");
+
+            document.getElementById("animalResult").textContent = `${selectedAnimal}: ${selectedAnimalResponse} `;
+            document.getElementById("dogResult").textContent = `Cachorro: ${dogAdjectiveValue} - Sua personalidade`;
+            
+            document.getElementById("catResult").textContent = `Gato: ${catAdjectiveValue} - Personalidade do seu parceiro(a)`;
+            
+            document.getElementById("ratResult").textContent = `Rato: ${ratAdjectiveValue} - Personalidade do seus inimigos`;
+            
+            document.getElementById("coffeeResult").textContent = `Café: ${coffeeAdjectiveValue} - Sua opinião sobre o amor`;
+            
+            document.getElementById("seaResult").textContent = `Mar: ${seaAdjectiveValue} - Sua vida em geral`;
+            
+            
+            document.getElementById("yellowResult").textContent = `Amarelo: Alguém que teve um grande impacto na sua vida: ${yellowPerson}`;
+            document.getElementById("orangeResult").textContent = `Laranja: Alguém que considera ser um verdadeiro amigo: ${orangePerson}`;
+            document.getElementById("redResult").textContent = `Vermelho: Alguém que você ama incondicionalmente: ${redPerson}`;
+            document.getElementById("whiteResult").textContent = `Branco: A sua alma gêmea: ${whitePerson}`;
+            document.getElementById("greenResult").textContent = `Verde: Alguém que você nunca vai esquecer: ${greenPerson}`;
+            
+            window.scrollTo(0, 0);           
+
+function scrollToTop() {
+    window.scrollTo(0, 0);
+}
+
+document.querySelector('button.btn-primary').addEventListener('click', scrollToTop);
+
+// Adicionando um evento de clique ao botão "Começar Teste Tibetano" para rolar para o topo
+document.getElementById('botao-comecar').addEventListener('click', scrollToTop);
+     
+        }
+
+       
+        function goBack() {
+            document.getElementById("respostas").classList.add("d-none");
+            telaOculta.classList.remove("d-none");
+        }
+
+        botaoComecar.addEventListener("click", () => {
+            telaInicial.classList.add("d-none");
+            telaOculta.classList.remove("d-none");
+        });
+    </script>
+</body>
+</html>

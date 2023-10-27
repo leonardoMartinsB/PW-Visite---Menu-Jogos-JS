@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../estilo/advI.css">
+    
+    <title>Adivinhação Número | BOOTSTRAP</title>
+</head>
+<body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">  
+                <div class="container">
+                    <a class="navbar-brand" href="#">Menu</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../index.html">Início</a>
+                            </li>
+                       </ul>
+                    </div>
+                </div>
+            </nav><br><br><br>
+            
+            <!-- Modal de Erro -->
+<div class="modal fade" id="modalErro" tabindex="-1" aria-labelledby="modalErroLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalErroLabel">Erro</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Você não escolheu nenhuma carta. Por favor, escolha pelo menos uma opção.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                        <h2 align="center"> 1º CARTELA</h2>
+                    <div class="card-body">
+                        <img src="../imagem/motos/carta1.png" class="img-fluid"><br><br>
+                        <h4 align="center">
+                                <small class="text-muted" id="sub_tl">A sua imagem aparece nessa cartela?.</small><br><br>
+                            <input type="radio" name="op1" value="Sim">Sim
+                            <input type="radio" name="op1" value="Não" checked>Não<br>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div><br><br><br>
+        
+      
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                        <h2 align="center"> 2º CARTELA</h2>
+                    <div class="card-body">
+                        <img src="../imagem/motos/carta2.png" class="img-fluid"><br><br>
+                        <h4 align="center">
+                                <small class="text-muted" id="sub_tl">A sua imagem aparece nessa cartela?.</small><br><br>
+                            <input type="radio" name="op2" value="Sim">Sim
+                            <input type="radio" name="op2" value="Não" checked>Não<br>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div><br><br><br>
+        
+       
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                        <h2 align="center">3º CARTELA</h2>
+                    <div class="card-body">
+                        <img src="../imagem/motos/carta3.png" class="img-fluid"><br><br>
+                        <h4 align="center">
+                                <small class="text-muted" id="sub_tl">A sua imagem aparece nessa cartela?.</small><br><br>
+                            <input type="radio" name="op3" value="Sim">Sim
+                            <input type="radio" name="op3" value="Não" checked>Não<br>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div><br><br><br>
+
+
+        
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                        <h2 align="center">4º CARTELA</h2>
+                    <div class="card-body">
+                        <img src="../imagem/motos/carta4.png" class="img-fluid"><br><br>
+                        <h4 align="center">
+                                <small class="text-muted" id="sub_tl">A sua imagem aparece nessa cartela?.</small><br><br>
+                            <input type="radio" name="op4" value="Sim">Sim
+                            <input type="radio" name="op4" value="Não" checked>Não
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div><br><br><br>
+ 
+
+                            <center>
+                            <input type="button" name="verifica" value="Ver o Resultado" onclick="respostas()" class="btn btn-success">
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+    
+    
+    
+<div class="row">
+   <div class="col-12">
+     
+       <div id="imagemResposta" align="center"></div>
+     
+    </div>
+</div>
+    
+    
+    <br><br><br>
+
+    
+    
+    <footer class="container-fluid bg-dark text-white py-3">
+        <div class="row">
+            <div class="col">
+                <h3>Sobre Nós</h3>
+                <p>Somos alunos da Etec Fernando Prestes extensão Fatec - Sorocaba-SP</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <p>© 2023 Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <script>
+        function respostas() {
+    var posicao = 0;
+    var resp1 = document.querySelector('input[name="op1"]:checked').value;
+    var resp2 = document.querySelector('input[name="op2"]:checked').value;
+    var resp3 = document.querySelector('input[name="op3"]:checked').value;
+    var resp4 = document.querySelector('input[name="op4"]:checked').value;
+
+    if (resp1 == "Sim") posicao = posicao + 1;
+    if (resp2 == "Sim") posicao = posicao + 2;
+    if (resp3 == "Sim") posicao = posicao + 8;
+    if (resp4 == "Sim") posicao = posicao + 4;
+
+    if (posicao > 0) {
+        var imagemDiv = document.getElementById("imagemResposta");
+
+        var imagem = new Image();
+        imagem.src = "../imagem/motos/" + posicao + ".jpg";
+        imagem.className = "img-fluid";
+        imagem.style.width = "80%";
+
+        imagemDiv.innerHTML = '<h2>A imagem que você pensou foi:</h2>';
+        imagemDiv.appendChild(imagem);
+        imagemDiv.innerHTML += '<br /><br><a href="../pages/advimg.html" class="btn btn-primary">Jogar Novamente</a>';
+        imagemDiv.innerHTML += '<br /><br><a href="../pages/AdivinhaImagem.html" class="btn btn-danger">Voltar ao Menu</a>';
+        
+        imagemDiv.scrollIntoView({ behavior: 'smooth' });
+   
+   var resultadoModal = new bootstrap.Modal(document.getElementById("resultadoModal"));
+    resultadoModal.show();
+  } else {
+    // Abre o modal de erro
+    var modalErro = new bootstrap.Modal(document.getElementById("modalErro"));
+    modalErro.show();
+  }
+}
+   
+    </script>
+</body>
+</html>

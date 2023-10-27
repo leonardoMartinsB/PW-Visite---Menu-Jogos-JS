@@ -1,0 +1,59 @@
+ @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+
+body{
+    background-color: #CCC5B9;
+}
+
+#titulo_an{
+    top: 15px;
+    font-family: 'Dela Gothic One', cursive;
+    
+}
+#sub_tl{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 1rem;
+}
+
+img{
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-img {
+    display: block;
+    margin: 0 auto;
+}
+
+#startbutton{
+    border-width: 40px;
+    font-size: 25px;
+}
+
+#titulomenores{
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 3vh;
+}
+
+
+#bordadiv{
+    border: 3px solid black;
+    background: #FFFCF2;
+}
+
+
+#inlineRadio2{
+    border: 2px solid black;
+}
+
+#inlineRadio1{
+    border: 2px solid black;
+}
+
+input{
+    border: black;
+}
